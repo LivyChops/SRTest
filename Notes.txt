@@ -1,0 +1,12 @@
+﻿Note: I got Proligence.SignalR working after much trial and error - so i'm following Hazza's advice from:
+http://orchard.codeplex.com/discussions/531958
+to get a hub working.
+
+So far what works, i've:
++ added reference to Proligence.SignalR [PS]
++ added  " Autofac from Lib
++ added  " Microsoft.AspNet.SignalR.Core.dll
+
+Also:
+Not sure why, but latest builds arent putting the correct web.config in codegen modules - so I have to copy one
+from the other modules and make sure Framework and core aren't referenced to get some razor code to work?

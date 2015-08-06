@@ -1,0 +1,42 @@
+@using System.Collections
+@using SRTest.SignalR.Models
+@{
+    var messages = (IEnumerable<Messages>)Model.Message;
+    //var location = (LocationPart)Model.Location;
+}
+
+<table class="table">
+    <tr>
+        <th>MessageID</th>
+        <th>
+            Message
+        </th>
+        <th>
+            EmptyMessage
+        </th>
+        <th>
+            MessageDate
+        </th>
+
+    </tr>
+
+    @foreach (var item in messages)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MessageID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.EmptyMessage)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.MessageDate)
+            </td>
+
+        </tr>
+    }
+
+</table>
